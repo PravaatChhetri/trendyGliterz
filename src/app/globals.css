@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.frontPage{
+    background-image: url("../../public/assets/images/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.custom-rotate-translate{
+    transform: rotate(90deg) translate(100%, 0);
+    transform-origin: top right;
+}

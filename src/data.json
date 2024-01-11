@@ -1,0 +1,123 @@
+[
+    {
+      "productName": "Product 1",
+      "price": "100",
+      "imageUrl": "/assets/images/image2-400x500.jpg",
+      "badgeText": "New Arrival"
+    },
+    {
+      "productName": "Product 2",
+      "price": "200",
+      "imageUrl": "/assets/images/image6-400x500.jpg",
+      "badgeText": "Best Seller"
+    },
+    {
+      "productName": "Product 3",
+      "price": "300",
+      "imageUrl": "/assets/images/image8-400x50011.jpg",
+      "badgeText": "Limited Edition"
+    },
+    {
+      "productName": "Product 4",
+      "price": "150",
+      "imageUrl": "/assets/images/image2-400x500.jpg",
+      "badgeText": "On Sale"
+    },
+    {
+      "productName": "Product 5",
+      "price": "250",
+      "imageUrl": "/assets/images/image6-400x500.jpg",
+      "badgeText": "Best Seller"
+    },
+    {
+      "productName": "Product 6",
+      "price": "350",
+      "imageUrl": "/assets/images/image8-400x50011.jpg",
+      "badgeText": "New Arrival"
+    },
+    {
+      "productName": "Product 7",
+      "price": "400",
+      "imageUrl": "/assets/images/image2-400x500.jpg",
+      "badgeText": "Limited Edition"
+    },
+    {
+      "productName": "Product 8",
+      "price": "450",
+      "imageUrl": "/assets/images/image6-400x500.jpg",
+      "badgeText": "On Sale"
+    },
+    {
+      "productName": "Product 9",
+      "price": "500",
+      "imageUrl": "/assets/images/image8-400x50011.jpg",
+      "badgeText": "Best Seller"
+    },
+    {
+      "productName": "Product 10",
+      "price": "550",
+      "imageUrl": "/assets/images/image2-400x500.jpg",
+      "badgeText": "New Arrival"
+    },
+    {
+      "productName": "Product 11",
+      "price": "600",
+      "imageUrl": "/assets/images/image6-400x500.jpg",
+      "badgeText": "Limited Edition"
+    },
+    {
+      "productName": "Product 12",
+      "price": "650",
+      "imageUrl": "/assets/images/image8-400x50011.jpg",
+      "badgeText": "On Sale"
+    },
+    {
+      "productName": "Product 13",
+      "price": "700",
+      "imageUrl": "/assets/images/image2-400x500.jpg",
+      "badgeText": "Best Seller"
+    },
+    {
+      "productName": "Product 14",
+      "price": "750",
+      "imageUrl": "/assets/images/image6-400x500.jpg",
+      "badgeText": "New Arrival"
+    },
+    {
+      "productName": "Product 15",
+      "price": "800",
+      "imageUrl": "/assets/images/image8-400x50011.jpg",
+      "badgeText": "Limited Edition"
+    },
+    {
+      "productName": "Product 16",
+      "price": "850",
+      "imageUrl": "/assets/images/image2-400x500.jpg",
+      "badgeText": "On Sale"
+    },
+    {
+      "productName": "Product 17",
+      "price": "900",
+      "imageUrl": "/assets/images/image6-400x500.jpg",
+      "badgeText": "Best Seller"
+    },
+    {
+      "productName": "Product 18",
+      "price": "950",
+      "imageUrl": "/assets/images/image8-400x50011.jpg",
+      "badgeText": "New Arrival"
+    },
+    {
+      "productName": "Product 19",
+      "price": "1000",
+      "imageUrl": "/assets/images/image2-400x500.jpg",
+      "badgeText": "Limited Edition"
+    },
+    {
+      "productName": "Product 20",
+      "price": "1050",
+      "imageUrl": "/assets/images/image6-400x500.jpg",
+      "badgeText": "On Sale"
+    }
+  ]
+  
