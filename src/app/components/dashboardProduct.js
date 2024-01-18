@@ -7,7 +7,7 @@ import { CgMoreVertical } from "react-icons/cg";
 function Product({ setData, setProducts, setType, item }) {
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:3000/api/products/${id}`, {
+      const res = await fetch(`/api/products/${id}`, {
         method: "DELETE",
       });
       if (res.status === 200) {

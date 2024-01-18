@@ -1,6 +1,6 @@
 import React from 'react';
 import { Parallax, useParallax } from 'react-scroll-parallax';
-import Image from 'next/image';
+
 
 /**
  * React component that creates a parallax effect on its content.

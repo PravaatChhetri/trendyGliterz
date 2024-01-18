@@ -99,7 +99,7 @@ export default function Cart() {
             </h1>
             <div className="flex justify-center items-center mt-5">
               <h1 className="text-left text-2xl font-bold ">
-                Subtotal{" "}
+                Subtotal{"  "}
                 <span className="text-xl font-light">
                   {"( Total Items " + items + " )"}
                 </span>

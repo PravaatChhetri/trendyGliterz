@@ -10,7 +10,7 @@ export default function Orders() {
   const [isLoading, setIsLoading] = React.useState(true);
   // Retrieve items from localStorage
   React.useEffect(() => {
-    fetch("http://localhost:3000/api/orders")
+    fetch("/api/orders")
       .then((res) => res.json())
       .then((order) => {
         setOrder(order);

@@ -35,7 +35,7 @@ function Checkout() {
     
     formData.append('cartItems', JSON.stringify(cartItems)); // Append cart items as a JSON string
     try {
-        const res=await fetch("http://localhost:3000/api/orders", {
+        const res=await fetch("/api/orders", {
             method: "POST",
             body:  formData,
         });

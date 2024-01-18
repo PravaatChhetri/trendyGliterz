@@ -2,7 +2,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { set } from "mongoose";
+
 
 export default function ProductPageCard({ product, setShowAlert }) {
   const [quantity, setQuantity] = useState(0);

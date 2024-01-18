@@ -1,6 +1,7 @@
 import React from "react";
 import { RiTwitterXFill } from "react-icons/ri";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -35,11 +36,21 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex flex-col w-full lg:w-1/5 justify-center items-center lg:items-end text-base font-normal text-white">
-          <h1 className="font-medium text-base mb-5"> RECENT NEWS</h1>
+          <h1 className="font-medium text-base mb-5"> Nav Links</h1>
           <ul className="text-right text-sm">
-            <li>About Us</li>
-            <li>Products</li>
-            <li>Get In Touch</li>
+            <li><Link href="/">
+            Home
+            </Link>
+            </li>
+            <li>
+            <Link href="/product">
+              Products
+              </Link></li>
+            <li>
+            <Link href="/cart">
+              Cart
+              </Link>
+              </li>
           </ul>
           
         </div>

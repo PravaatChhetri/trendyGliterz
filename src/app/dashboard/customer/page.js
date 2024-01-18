@@ -4,7 +4,7 @@ import React from 'react'
 export default function Product() {
   const [users, setUsers] = React.useState([{}]);
   React.useEffect(() => {
-    fetch("http://localhost:3000/api/orders")
+    fetch("/api/orders")
       .then((res) => res.json())
       .then((val) => {
     

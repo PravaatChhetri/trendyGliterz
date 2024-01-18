@@ -25,7 +25,7 @@ const ProductForm = ({ data , type}) => {
   const handleFormUpdate = async (formData) => {
   
     try {
-        const res=await fetch(`http://localhost:3000/api/products/${data._id}`, {
+        const res=await fetch(`/api/products/${data._id}`, {
             method: "PUT",
             body:  formData,
         });
@@ -52,7 +52,7 @@ const ProductForm = ({ data , type}) => {
   }
 
     if(type=== "Add Product"){try {
-        const res=await fetch("http://localhost:3000/api/products", {
+        const res=await fetch("/api/products", {
             method: "POST",
             body:  formData,
         });
