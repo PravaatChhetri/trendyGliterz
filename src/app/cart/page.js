@@ -5,6 +5,7 @@ import { BsCartXFill } from "react-icons/bs";
 import { MdAccountBalanceWallet } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";
 import Image from "next/image";
+import Link from "next/link";
 
 // Add other necessary imports
 
@@ -12,16 +13,21 @@ export default function Cart() {
   const [cartItems, setCartItems] = useState([]);
   const [total, setTotal] = useState(0);
 
+ 
+
   useEffect(() => {
     // Retrieve items from localStorage
     const storedCartItems = JSON.parse(localStorage.getItem("cart")) || [];
     setCartItems(storedCartItems);
-    setTotal(
-      storedCartItems.reduce(
-        (acc, item) => acc + parseInt(item.price) * item.quantity,
-        0
-      )
+  }, []); // Removed cartItems from dependency array to prevent infinite loop
+  
+  useEffect(() => {
+    // Update total when cartItems changes
+    const newTotal = cartItems.reduce(
+      (acc, item) => acc + parseInt(item.price) * item.quantity,
+      0
     );
+    setTotal(newTotal);
   }, [cartItems]);
 
   // Functions to calculate subtotal and total
@@ -41,10 +47,11 @@ export default function Cart() {
         <div className="col-span-2">
           {/* Cart Items List */}
           <h2 className="text-2xl font-bold mb-5">Shopping Cart.</h2>
-          <div className="grid grid-cols-3">
+          <div className="flex justify-between items-center">
             <h1 className="font-semibold text-center">Product</h1>
             <h1 className="font-semibold text-left pl-20">Quantity</h1>
             <h1 className="font-semibold text-left pl-5">Total Price</h1>
+            <h1 className="font-semibold text-left pl-5">{"     "}</h1>
           </div>
           <hr />
           {cartItems.length > 0 ? (
@@ -52,7 +59,7 @@ export default function Cart() {
               <CartItem
                 key={item.id}
                 item={item}
-                setCartItems={setCartItems}
+                setCartItems={setCartItems} 
                 cartItems={cartItems}
               />
             ))
@@ -115,7 +122,9 @@ export default function Cart() {
             </span>
             <p className="font-semibold text-md flex items-center gap-3 ml-1 mt-2"><FaPhone className="text-xl" />+91 9876543210</p>
             <div className="my-5">
-              <button className="btn btn-neutral text-lg w-full">Place Order</button>
+              <Link href="/checkout">
+              <button className="btn btn-neutral text-lg w-full">Proceed to Checkout</button>
+              </Link>
             </div>
           </div>
         </div>

@@ -25,21 +25,21 @@ export default function Home() {
         <h1>Featured Products</h1>
         <div className="flex flex-col lg:flex-row justify-evenly items-center w-[90%] space-y-3">
           <Card
-            productName="Product 1"
+            productName="Gold Jumka"
             originalPrice="1000"
             salePrice="500"
             imageUrl="/assets/images/image6-400x500.jpg"
             badgeText="Best Seller"
           />
           <Card
-            productName="Product 2"
+            productName="Ruby Jumka"
             originalPrice="1500"
             salePrice="500"
             imageUrl="/assets/images/image8-400x50011.jpg"
             badgeText="Best Seller"
           />
           <Card
-            productName="Product 3"
+            productName="Emerald Jumka"
             originalPrice="1000"
             salePrice="500"
             imageUrl="/assets/images/image2-400x500.jpg"
@@ -88,7 +88,7 @@ export default function Home() {
             <p className="text-base">Most Reasonable price for product</p>
           </div>
         </div>
-        <div className=" frontPage w-screen lg:h-[40vw] flex flex-col lg:flex-row overflow-hidden">
+        <div className=" frontPage w-full lg:h-[40vw] flex flex-col lg:flex-row overflow-hidden">
           <div className="w-full h-[500px] lg:h-full lg:w-1/2 flex flex-col justify-center items-center text-white bg-[#00000083] mx-auto">
             <div className="w-[80%] pl-10">
               <p className="font-bold text-sm">01.</p>
@@ -105,7 +105,7 @@ export default function Home() {
           </div>
           <div className="w-full object-center lg:w-1/2 h-[600px] bg-white ">
             <Image
-              className="w-full "
+              className="w-full"
               src="/assets/images/image8-400x50011.jpg"
               width={500}
               height={500}
@@ -113,30 +113,30 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className=" w-screen flex flex-col items-start overflow-hidden p-4">
+        <div className=" w-full flex flex-col items-start overflow-hidden p-4">
           <p className="text-lg font-extrabold">Trendy Gliterz</p>
           <p className="text-4xl font-extrabold">New Releases</p>
           <div className="flex flex-col lg:flex-row justify-evenly items-center w-full my-10">
             <ProductCard
-              title={"Name of the design"}
+              title={"Emareld Jumka"}
               description={
-                "The description of the content will be provided in this section."
+                "Beautifully crafted emerald jumka with gold plating."
               }
               imageUrl={"/assets/images/image2-400x500.jpg"}
-              date="11/11/2023"
+              date="11/12/2023"
             />
             <ProductCard
-              title={"Name of the design"}
+              title={"Gold Jumka"}
               description={
-                "The description of the content will be provided in this section."
+                "Jumka with gold plating and beautiful design."
               }
               imageUrl={"/assets/images/image6-400x500.jpg"}
               date={"11/11/2023"}
             />
             <ProductCard
-              title={"Name of the design"}
+              title={"Ruby Jumka"}
               description={
-                "The description of the content will be provided in this section."
+                "Jumka with gold plating and ruby stones."
               }
               imageUrl={"/assets/images/image8-400x50011.jpg"}
               date={"11/11/2023"}

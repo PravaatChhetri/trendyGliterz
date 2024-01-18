@@ -3,6 +3,7 @@ import React from "react";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa6";
 import Link from "next/link";
 import Footer from "./Footer";
+import { usePathname } from "next/navigation";
 
 /**
  * Renders a navigation bar with a sidebar.
@@ -11,7 +12,8 @@ import Footer from "./Footer";
  * @returns {JSX.Element} The rendered navigation bar and sidebar.
  */
 export default function Navbar({ children }) {
-  const [active, setActive] = React.useState("");
+  const active=usePathname();
+
   return (
     <div className="drawer ">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
@@ -47,30 +49,24 @@ export default function Navbar({ children }) {
             <ul className="menu menu-horizontal text-white ">
               {/* Navbar menu content here */}
               <li
-                className={`${active === "Home" ? "border-b-2 mb-[0px]" : ""}`}
-                onClick={() => {
-                  setActive("Home");
-                }}
+                className={`${active === "/" ? "border-b-2 mb-[0px]" : ""}`}
+                onClick={() => {console.log("home clicked");}}
+
               >
                 <Link href="/">Home</Link>
               </li>
 
               <li
                 className={`${
-                  active === "Product" ? "border-b-2 mb-[0px]" : ""
+                  active === "/product" ? "border-b-2 mb-[0px]" : ""
                 }`}
-                onClick={() => {
-                  setActive("Product");
-                }}
               >
                 <Link href="/product">Product</Link>
               </li>
               
               <li
-                className={`${active === "Cart" ? "border-b-2 mb-[0px]" : ""}`}
-                onClick={() => {
-                  setActive("Cart");
-                }}
+                className={`${active === "/cart" ? "border-b-2 mb-[0px]" : ""}`}
+     
               >
                 <Link href="/cart">Cart</Link>
               </li>
@@ -87,9 +83,9 @@ export default function Navbar({ children }) {
                 </a>
               </li>
               <li>
-                <a>
+                <Link href="https://www.instagram.com/trendyglitterz/">
                   <FaInstagram />
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -108,33 +104,27 @@ export default function Navbar({ children }) {
         <ul className="menu p-4 w-80 min-h-full bg-base-200">
           {/* Sidebar content here */}
           <li
-            className={`${active === "Home" ? "border-b-2 mb-[0px]" : ""}`}
-            onClick={() => {
-              setActive("Home");
-            }}
-          >
-            <Link href="/">Home</Link>
-          </li>
+                className={`${active === "/" ? "border-b-2 mb-[0px]" : ""}`}
+                onClick={() => {console.log("home clicked");}}
 
-          <li
-            className={`${active === "Product" ? "border-b-2 mb-[0px]" : ""}`}
-            onClick={() => {
-              setActive("Product");
-            }}
-          >
-            <Link href="/product">Product</Link>
-          </li>
-          {/* <li>
-                <a>Offer Zone</a>
-              </li> */}
-          <li
-            className={`${active === "Cart" ? "border-b-2 mb-[0px]" : ""}`}
-            onClick={() => {
-              setActive("Cart");
-            }}
-          >
-            <Link href="/cart">Cart</Link>
-          </li>
+              >
+                <Link href="/">Home</Link>
+              </li>
+
+              <li
+                className={`${
+                  active === "/product" ? "border-b-2 mb-[0px]" : ""
+                }`}
+              >
+                <Link href="/product">Product</Link>
+              </li>
+              
+              <li
+                className={`${active === "/cart" ? "border-b-2 mb-[0px]" : ""}`}
+     
+              >
+                <Link href="/cart">Cart</Link>
+              </li>
         </ul>
       </div>
     </div>
