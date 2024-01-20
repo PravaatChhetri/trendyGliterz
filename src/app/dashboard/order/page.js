@@ -50,9 +50,7 @@ export default function Orders() {
                   <div className="avatar flex justify-center items-center">
                     <div className="mask mask-squircle p-2 bg-[#ccc]">
                       <p className="font-bold text-2xl text-center h-full">
-                        {order.fullname?.split(" ")[0][0] +
-                          "" +
-                          order.fullname?.split(" ")[1][0]}
+                        {order?.fullname?.split(" ").length>1 ?(order?.fullname?.split(" ")[0][0]+order?.fullname?.split(" ")[1][0] ):order?.fullname?.split(" ")[0][0]}
                       </p>
                     </div>
                   </div>

@@ -75,7 +75,7 @@ export default function Cart() {
           {cartItems.length > 0 && (
             <div>
               <hr />
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center my-5">
                 <h1 className="text-2xl font-bold">
                   Subtotal{" "}
                   <span className="text-xl font-light">
@@ -90,7 +90,7 @@ export default function Cart() {
           {/* Continue Shopping Link */}
         </div>
 
-        <div className="col-span-1 rounded-lg shadow-md flex flex-col justify-center items-center ">
+        <div className="col-span-1 rounded-lg shadow-md flex flex-col justify-center items-center mx-auto ">
           {/* Payment Info Component */}
           {/* Summary Component */}
           <div>
@@ -123,7 +123,7 @@ export default function Cart() {
             <p className="font-semibold text-md flex items-center gap-3 ml-1 mt-2"><FaPhone className="text-xl" />+91 9876543210</p>
             <div className="my-5">
               <Link href="/checkout">
-              <button className="btn btn-neutral text-lg w-full">Proceed to Checkout</button>
+              <button className="btn btn-neutral text-lg w-[90%] mx-auto">Proceed to Checkout</button>
               </Link>
             </div>
           </div>

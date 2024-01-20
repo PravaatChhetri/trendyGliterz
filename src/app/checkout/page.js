@@ -28,7 +28,6 @@ function Checkout() {
   );
   const handleSubmit = async(event) => {
     event.preventDefault(); // Prevent the default form submission
-
     const formData = new FormData(formRef.current); 
     // Use the ref to get form data
 
@@ -42,6 +41,8 @@ function Checkout() {
         console.log(res);
         if(res.status===200){
             alert("Order placed successfully");
+            localStorage.removeItem("cart");
+
         }
         else{
             alert("Error occured");
@@ -59,14 +60,14 @@ function Checkout() {
 
   return (
     <>
-      <h1 className="text-center text-4xl fon-semibold my-4">Checkout</h1>
+      <h1 className="text-center text-5xl font-medium my-5">Checkout</h1>
         <form ref={formRef} onSubmit={handleSubmit}>
-      <div className="flex flex-col lg:flex-row justify-center items-center w-[90%] mx-auto gap-5">
+      <div className="flex flex-col lg:flex-row justify-center lg:items-start items-center w-[90%] min-h-[75vh] mx-auto gap-5">
           <div className="">
             <h1 className="text-2xl font-semibold">Billing Address</h1>
             <hr />
 
-            <div className="grid grid-cols-2 gap-3 my-5">
+            <div className="grid grid-cols-1 gap-3 my-5">
               <div>
                 <label htmlFor="fname">Full Name</label>
                 <input
@@ -74,7 +75,8 @@ function Checkout() {
                   id="fname"
                   name="fullname"
                   className="input input-bordered w-full max-w-xs"
-                  placeholder="John M. Doe"
+                  placeholder="John M. Doe" 
+                  required
                 />
               </div>
 
@@ -86,6 +88,7 @@ function Checkout() {
                   name="email"
                   className="input input-bordered w-full max-w-xs"
                   placeholder="johnMdoe@gmail.com"
+                  required
                 />
               </div>
               <div>
@@ -96,9 +99,10 @@ function Checkout() {
                   name="phone"
                   className="input input-bordered w-full max-w-xs"
                   placeholder="9876543210"
+                  required
                 />
               </div>
-
+<h1 className="text-xl font-bold mt-3">Address</h1>
               <div>
                 <label htmlFor="streetadr">Street Address</label>
                 <input
@@ -107,6 +111,7 @@ function Checkout() {
                   name="streetaddress"
                   placeholder="Teen Murti Marg Area"
                   className="input input-bordered w-full max-w-xs"
+                  required
                 />
               </div>
 
@@ -118,6 +123,7 @@ function Checkout() {
                   id="city"
                   name="city"
                   placeholder="New Delhi"
+                  required
                 />
               </div>
               <div className="">
@@ -128,6 +134,7 @@ function Checkout() {
                   id="state"
                   name="state"
                   placeholder="Delhi"
+                  required
                 />
               </div>
               <div className="">
@@ -138,6 +145,7 @@ function Checkout() {
                   id="zip"
                   name="zip"
                   placeholder="110011"
+                  required
                 />
               </div>
             </div>
